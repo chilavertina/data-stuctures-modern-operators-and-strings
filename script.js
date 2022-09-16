@@ -48,6 +48,12 @@ let b = 999;
 const obj = { a: 23, b: 7, c: 14 };
 ({ a, b } = obj);
 console.log(a, b);
+
+// Nested objects
+const {
+  fri: { open, close },
+} = openingHours;
+console.log(open, close);
 /*
 const arr = [2, 3, 4];
 const a = arr[0];
