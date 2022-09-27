@@ -68,7 +68,8 @@ const str = 'Jonas';
 const letters = [...str, ' ', 'S.'];
 console.log(letters);
 
-const ingredients = [
+// Stvarni primer
+/*const ingredients = [
   prompt("Let's make pasta! Ingredient1?"),
   prompt("Let's make pasta! Ingredient2?"),
   prompt("Let's make pasta! Ingredient3?"),
@@ -76,6 +77,16 @@ const ingredients = [
 console.log(ingredients);
 
 restaurant.orderPasta(...ingredients);
+*/
+// Objects
+
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
 
 /*
 restaurant.orderDelivery({
