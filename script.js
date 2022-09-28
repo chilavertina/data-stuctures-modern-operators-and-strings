@@ -44,6 +44,21 @@ const restaurant = {
     );
   },
 };
+// Primer spread operatora
+const arr = [1, 2, ...[3, 4]];
+
+// Primer rest operatora
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
+
+/*
+// Spread operator
 
 const arr = [7, 8, 9];
 
@@ -67,7 +82,7 @@ console.log(menu);
 const str = 'Jonas';
 const letters = [...str, ' ', 'S.'];
 console.log(letters);
-
+*/
 // Stvarni primer
 /*const ingredients = [
   prompt("Let's make pasta! Ingredient1?"),
@@ -78,6 +93,8 @@ console.log(ingredients);
 
 restaurant.orderPasta(...ingredients);
 */
+
+/*
 // Objects
 
 const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
@@ -87,7 +104,7 @@ const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
-
+*/
 /*
 restaurant.orderDelivery({
   time: '22:30',
