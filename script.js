@@ -44,6 +44,9 @@ const restaurant = {
     );
   },
 };
+
+// 1. Destruktuiranje nizova i objekata uz pomoc REST operatora
+
 // Primer spread operatora
 const arr = [1, 2, ...[3, 4]];
 
@@ -56,6 +59,10 @@ const [pizza, , risotto, ...otherFood] = [
   ...restaurant.starterMenu,
 ];
 console.log(pizza, risotto, otherFood);
+
+// Objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
 
 /*
 // Spread operator
