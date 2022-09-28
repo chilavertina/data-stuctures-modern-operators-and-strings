@@ -50,6 +50,7 @@ const restaurant = {
   },
 };
 
+console.log('---- OR ----');
 // || use ANY data type, return ANY data type, short-circuiting
 console.log(3 || 'Jonas');
 console.log('' || 'Jonas');
@@ -64,6 +65,19 @@ console.log(guests1);
 
 const guests2 = restaurant.numGuests || 10;
 console.log(guests2);
+
+console.log('---- AND ----');
+
+console.log(0 && 'Jonas');
+console.log(7 && 'Jonas');
+
+console.log('Hello' && 23 && null && 'jonas');
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
 /*
 // 1. Destruktuiranje nizova i objekata uz pomoc REST operatora
