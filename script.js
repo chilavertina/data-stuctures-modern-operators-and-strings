@@ -50,6 +50,15 @@ const restaurant = {
   },
 };
 
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests); //rezultat je 10
+
+// Nullish: null and undefined (not 0 or '')
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect); //rezultat je 0 zbog nullish coalescing operatora ??
+
+/*
 console.log('---- OR ----');
 // || use ANY data type, return ANY data type, short-circuiting
 console.log(3 || 'Jonas');
@@ -78,7 +87,7 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
-
+*/
 /*
 // 1. Destruktuiranje nizova i objekata uz pomoc REST operatora
 
