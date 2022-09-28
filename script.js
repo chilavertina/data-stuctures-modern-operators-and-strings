@@ -50,6 +50,15 @@ const restaurant = {
   },
 };
 
+// || use ANY data type, return ANY data type, short-circuiting
+console.log(3 || 'Jonas');
+console.log('' || 'Jonas');
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null); //ovde je rezultat 'Hello' jer je prvi true element, posto su undefined, 0 i '' false
+
+/*
 // 1. Destruktuiranje nizova i objekata uz pomoc REST operatora
 
 // Primer spread operatora
@@ -85,7 +94,7 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
-
+*/
 /*
 // Spread operator
 
