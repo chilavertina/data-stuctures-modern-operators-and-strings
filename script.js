@@ -77,6 +77,20 @@ for (const day of days) {
 
 console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
 
+//arrays
+const user = [
+  {
+    name: 'Jonas',
+    email: 'hello@jonas.io',
+  },
+];
+
+console.log(user[0]?.name ?? 'User array empty');
+
+//ovo je duza verzija koda iznad
+if (user.length > 0) console.log(user[0].name);
+else console.log('user array empty');
+
 // for of petlja
 // const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 // for (const item of menu) console.log(item);
