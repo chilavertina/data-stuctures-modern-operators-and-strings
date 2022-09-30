@@ -11,7 +11,7 @@ const openingHours = {
     open: 11,
     close: 23,
   },
-  [`day-${2 + 4}`]: {
+  [weekdays[5]]: {
     open: 0, // Open 24 hours
     close: 24,
   },
@@ -59,7 +59,10 @@ const rest2 = {
   owner: 'Giovanni Rossi',
 };
 
-console.log(openingHours);
+if (restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
+
+//with optional chaining
+console.log(restaurant.openingHours.mon?.open);
 
 // for of petlja
 // const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
