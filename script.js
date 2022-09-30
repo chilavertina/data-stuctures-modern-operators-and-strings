@@ -59,37 +59,41 @@ const rest2 = {
   owner: 'Giovanni Rossi',
 };
 
-if (restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
-
-//with optional chaining
-console.log(restaurant.openingHours.mon?.open);
-console.log(restaurant.openingHours?.mon?.open); //ovo je u stvari ovo:
-/* if (restaurant.openingHours && restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);*/
-
-//primer
-const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
-for (const day of days) {
-  const open = restaurant.openingHours[day]?.open ?? 'closed';
-  console.log(`On ${day}, we open at ${open}`);
+for (const day of Object.keys(openingHours)) {
+  console.log(day);
 }
 
-//methods
+// if (restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
 
-console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+// //with optional chaining
+// console.log(restaurant.openingHours.mon?.open);
+// console.log(restaurant.openingHours?.mon?.open); //ovo je u stvari ovo:
+// /* if (restaurant.openingHours && restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);*/
 
-//arrays
-const user = [
-  {
-    name: 'Jonas',
-    email: 'hello@jonas.io',
-  },
-];
+// //primer
+// const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// for (const day of days) {
+//   const open = restaurant.openingHours[day]?.open ?? 'closed';
+//   console.log(`On ${day}, we open at ${open}`);
+// }
 
-console.log(user[0]?.name ?? 'User array empty');
+// //methods
 
-//ovo je duza verzija koda iznad
-if (user.length > 0) console.log(user[0].name);
-else console.log('user array empty');
+// console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+
+// //arrays
+// const user = [
+//   {
+//     name: 'Jonas',
+//     email: 'hello@jonas.io',
+//   },
+// ];
+
+// console.log(user[0]?.name ?? 'User array empty');
+
+// //ovo je duza verzija koda iznad
+// if (user.length > 0) console.log(user[0].name);
+// else console.log('user array empty');
 
 // for of petlja
 // const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
