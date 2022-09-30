@@ -61,6 +61,10 @@ const rest2 = {
   owner: 'Giovanni Rossi',
 };
 
+// for of petlja
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+for (const item of menu) console.log(item);
+
 // OR assignment operator
 // rest1.numGuests = rest1.numGuests || 10;
 // rest2.numGuests = rest2.numGuests || 10;
@@ -68,18 +72,18 @@ const rest2 = {
 // rest2.numGuests ||= 10;
 
 // nullish assignment operator
-rest1.numGuests ??= 10;
-rest2.numGuests ??= 10;
+// rest1.numGuests ??= 10;
+// rest2.numGuests ??= 10;
 
 // AND assignment operator
 // rest1.owner = rest1.owner && '<ANONYMOUS>';
 // rest2.owner = rest2.owner && '<ANONYMOUS>';
 
-rest1.owner &&= '<ANONYMOUS>';
-rest2.owner &&= '<ANONYMOUS>';
+// rest1.owner &&= '<ANONYMOUS>';
+// rest2.owner &&= '<ANONYMOUS>';
 
-console.log(rest1);
-console.log(rest2);
+// console.log(rest1);
+// console.log(rest2);
 /*
 restaurant.numGuests = 0;
 const guests = restaurant.numGuests || 10;
