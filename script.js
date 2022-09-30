@@ -73,6 +73,10 @@ for (const day of days) {
   console.log(`On ${day}, we open at ${open}`);
 }
 
+//methods
+
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+
 // for of petlja
 // const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 // for (const item of menu) console.log(item);
