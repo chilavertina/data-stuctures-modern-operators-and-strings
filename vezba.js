@@ -201,7 +201,7 @@ for (const [tim, kvota] of Object.entries(game.odds)) {
 */
 
 //SETS
-
+/*
 const tenkovi = new Set([
   't72',
   'm84',
@@ -254,3 +254,6 @@ console.log(
     'lazar',
   ]).size
 );
+*/
+
+// MAPS
