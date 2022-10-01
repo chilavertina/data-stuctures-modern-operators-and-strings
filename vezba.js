@@ -257,3 +257,37 @@ console.log(
 */
 
 // MAPS
+
+const stadion = new Map();
+stadion.set('ime', 'Rajko Mitic');
+stadion.set('grad', 'Beograd');
+stadion.set('lokacija', 'Ljutice Bogdana, Topcider');
+stadion.set('kapacitet', 53000);
+stadion.set(true, 'Muzej je otvoren!');
+stadion.set(false, 'Muzej je zatvoren');
+
+console.log(stadion);
+
+stadion
+  .set('tribine', ['sever', 'istok', 'jug', 'zapad'])
+  .set('loze', ['Seki', 'Dzaja', 'Pizon', 'Piksi'])
+  .set('boja tribina', 'crvena')
+  .set('otvoreno', 8)
+  .set('zatvoreno', 18);
+
+console.log(stadion);
+
+console.log(stadion.get('grad'));
+console.log(stadion.get('kapacitet'));
+
+const vremePosete = 15;
+console.log(
+  stadion.get(
+    vremePosete > stadion.get('otvoreno') &&
+      vremePosete < stadion.get('zatvoreno')
+  )
+);
+
+const reflektori = [1, 2, 3, 4];
+stadion.set(reflektori, 'Broj reflektora');
+console.log(stadion.get(reflektori));
