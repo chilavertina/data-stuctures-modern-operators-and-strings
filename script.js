@@ -59,7 +59,6 @@ const rest2 = {
   owner: 'Giovanni Rossi',
 };
 
-
 /*
 // property NAMES (keys)
 const properties = Object.keys(openingHours);
@@ -346,3 +345,31 @@ console.log(i, j, k);
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
 */
+
+//SETS
+const ordersSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(ordersSet);
+console.log(ordersSet.size);
+console.log(ordersSet.has('Pizza'));
+console.log(ordersSet.has('Cheese'));
+ordersSet.add('Bruschetti');
+ordersSet.add('Bruschetti');
+console.log(ordersSet);
+ordersSet.delete('Pizza');
+console.log(ordersSet);
+//ordersSet.clear();
+
+for (const order of ordersSet) {
+  console.log(order);
+}
+
+const staff = ['waiter', 'chef', 'manager', 'chef', 'waiter'];
+const staffSort = new Set(staff);
+console.log(staffSort);
