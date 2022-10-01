@@ -377,8 +377,8 @@ console.log(new Set(['waiter', 'chef', 'manager', 'chef', 'waiter']).size);
 console.log(new Set('urosmartic').size);
 */
 
-//MAPS
-
+//MAPS OSNOVE
+/*
 const rest = new Map();
 rest.set('name', 'Classico Italiano');
 rest.set(1, 'Firenze, Italy');
@@ -413,3 +413,23 @@ rest.set(arr, 'Test');
 console.log(rest.get(arr));
 rest.set(document.querySelector('h1'), 'Heading');
 console.log(rest);
+*/
+
+//MAPS ITERATION
+
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct!'],
+  [false, 'Try again!'],
+]);
+
+console.log(question);
+
+// Convert objects to maps
+
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
