@@ -39,6 +39,8 @@ const game = {
   },
 };
 
+//CODING CHALLENGE 1
+/* 
 const [players1, players2] = game.players;
 console.log(players1, players2);
 
@@ -67,3 +69,28 @@ printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
 
 team1 > team2 && console.log(`Team2 is a winner!`);
 team1 < team2 && console.log(`Team1 is a winner!`);
+*/
+
+// CODING CHALLENGE 2
+
+const strelci = Object.entries(game.scored);
+console.log(strelci);
+for (const [gol, igrac] of strelci) {
+  console.log(`Strelac ${Number(gol) + 1}. gola je: ${igrac}`);
+}
+
+const kvote = Object.values(game.odds);
+console.log(kvote);
+
+let srednjaKvota = 0;
+
+for (const kvota of kvote) {
+  srednjaKvota += kvota;
+}
+
+console.log(`Srednja kvota je ${srednjaKvota / kvote.length}`);
+
+for (const [tim, kvota] of Object.entries(game.odds)) {
+  const kvotaTimova = tim === 'x' ? ' nereseno' : ` pobedu ${game[tim]}`;
+  console.log(`Kvota za${kvotaTimova} je: ${kvota}`);
+}

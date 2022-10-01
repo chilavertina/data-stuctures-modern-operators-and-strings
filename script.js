@@ -59,6 +59,8 @@ const rest2 = {
   owner: 'Giovanni Rossi',
 };
 
+
+/*
 // property NAMES (keys)
 const properties = Object.keys(openingHours);
 console.log(properties);
@@ -81,7 +83,7 @@ console.log(entries);
 for (const [key, { open, close }] of entries) {
   console.log(`On ${key} we open at ${open} and close at ${close}`);
 }
-
+*/
 // if (restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
 
 // //with optional chaining
