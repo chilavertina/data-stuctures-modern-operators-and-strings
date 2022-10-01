@@ -373,3 +373,5 @@ for (const order of ordersSet) {
 const staff = ['waiter', 'chef', 'manager', 'chef', 'waiter'];
 const staffSort = [...new Set(staff)];
 console.log(staffSort);
+console.log(new Set(['waiter', 'chef', 'manager', 'chef', 'waiter']).size);
+console.log(new Set('urosmartic').size);
