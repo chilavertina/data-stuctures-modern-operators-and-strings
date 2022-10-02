@@ -451,7 +451,7 @@ console.log([...question.entries()]);
 //WORKING WITH STRINGS 1
 const airline = 'TAP Air Portugal';
 const plane = 'A320';
-
+/*
 console.log(plane[0]);
 console.log(plane[1]);
 console.log(plane[2]);
@@ -489,3 +489,49 @@ proveriSrednjeSediste('1E');
 proveriSrednjeSediste('52C');
 proveriSrednjeSediste('11B');
 proveriSrednjeSediste('122F');
+*/
+
+//WORKING WITH STRINGS 2
+
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+//Popravljanje pocetnog velikog slova u imenu
+const passenger = 'jOnAS';
+const passengerLow = passenger.toLowerCase();
+console.log(passengerLow);
+const passengerCorrect = passengerLow[0].toUpperCase() + passengerLow.slice(1);
+console.log(passengerCorrect);
+
+const ispravnoIme = function (ime) {
+  const passengerLow = ime.toLowerCase();
+  const passengerCorrect =
+    passengerLow[0].toUpperCase() + passengerLow.slice(1);
+  console.log(passengerCorrect);
+};
+
+ispravnoIme('uRoS');
+ispravnoIme('ZleNKA');
+
+// Comparing email
+
+const email = 'hello@jonas.io';
+const loginEmail = '  Hello@jonas.Io \n';
+
+//const lowerEmail = loginEmail.toLowerCase();
+//const trimmedEMail = lowerEmail.trim(); //uklanjanje razmaka
+
+const normalizedEmail = loginEmail.toLowerCase().trim(); //ovo je skracena metoda ove iznad
+console.log(normalizedEmail);
+
+const proveriEmail = function (emailUnos) {
+  const ispravanEmail = 'urosmartic@gmail.com';
+  const normalizedEmail = emailUnos.toLowerCase().trim();
+  if (ispravanEmail === normalizedEmail) {
+    console.log(`Vas email je dobro napisan!`);
+  } else {
+    console.log(`Proverite da li ste dobro uneli Vas email.`);
+  }
+};
+
+proveriEmail('  UroMarTic@gmail.com');
