@@ -535,3 +535,14 @@ const proveriEmail = function (emailUnos) {
 };
 
 proveriEmail('  UroMarTic@gmail.com');
+
+//replacing
+const priceGB = '288,97₤';
+const priceUS = priceGB.replace('₤', '$').replace(',', '.');
+console.log(priceUS);
+
+const announcement =
+  'All passengers come to boarding door 23. Boarding door 23!';
+console.log(announcement.replace('door', 'gate')); //replace menja samo prvu rec na koju naidje
+console.log(announcement.replaceAll('door', 'gate')); //replaceAll menja sve reci koje se nalaze u stringu
+console.log(announcement.replace(/door/g, 'gate')); // /door/g je 'regular expression' i on menja sve reci koje se nalaze u stringu takodje, ali to je stariji nacin menjanja
