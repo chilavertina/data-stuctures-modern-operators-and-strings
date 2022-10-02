@@ -416,7 +416,7 @@ console.log(rest);
 */
 
 //MAPS ITERATION
-
+/*
 const question = new Map([
   ['question', 'What is the best programming language in the world?'],
   [1, 'C'],
@@ -446,3 +446,46 @@ console.log([...question]);
 console.log([...question.keys()]);
 console.log([...question.values()]);
 console.log([...question.entries()]);
+*/
+
+//WORKING WITH STRINGS 1
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+
+console.log(airline.length);
+console.log('B737'.length);
+
+console.log(airline.indexOf('r')); //daje na kojoj se poziciji prvo pojavljuje slovo
+console.log(airline.lastIndexOf('r')); //daje na kojoj se poslednjoj poziciji pojavljuje slovo
+console.log(airline.indexOf('Portugal')); //daje poziciju na kojoj se nalazi dati string
+
+console.log(airline.slice(4)); // deli string od date pozicije
+console.log(airline.slice(4, 7)); // deli string od pozicije 4 do pozicije 7
+
+console.log(airline.slice(0, airline.indexOf(' '))); // izvlaci samo prvu rec stringa
+console.log(airline.slice(airline.lastIndexOf(' ') + 1)); // izvlaci samo poslednju rec, +1 je dodat kako bi se uklonio razmak na pocetku poslednje reci
+
+console.log(airline.slice(-2)); // deli string od poslednje dve pozicije
+console.log(airline.slice(1, -1));
+
+const proveriSrednjeSediste = function (seat) {
+  const sediste = seat.slice(-1);
+  if (sediste === 'B' || sediste === 'E') {
+    console.log('Dobili ste sediste u sredini!');
+  } else if (sediste === 'A' || sediste === 'F') {
+    console.log('Imali ste srece, dobili ste sediste do prozora!');
+  } else {
+    console.log('Dobili ste sediste do prolaza!');
+  }
+};
+
+proveriSrednjeSediste('12A');
+proveriSrednjeSediste('1E');
+proveriSrednjeSediste('52C');
+proveriSrednjeSediste('11B');
+proveriSrednjeSediste('122F');
