@@ -266,7 +266,7 @@ stadion.set('kapacitet', 53000);
 stadion.set(true, 'Muzej je otvoren!');
 stadion.set(false, 'Muzej je zatvoren');
 
-console.log(stadion);
+// console.log(stadion);
 
 stadion
   .set('tribine', ['sever', 'istok', 'jug', 'zapad'])
@@ -275,10 +275,10 @@ stadion
   .set('otvoreno', 8)
   .set('zatvoreno', 18);
 
-console.log(stadion);
+// console.log(stadion);
 
-console.log(stadion.get('grad'));
-console.log(stadion.get('kapacitet'));
+// console.log(stadion.get('grad'));
+// console.log(stadion.get('kapacitet'));
 
 const vremePosete = 15;
 console.log(
@@ -290,4 +290,17 @@ console.log(
 
 const reflektori = [1, 2, 3, 4];
 stadion.set(reflektori, 'Broj reflektora');
-console.log(stadion.get(reflektori));
+// console.log(stadion.get(reflektori));
+
+const tenkoviMapa = new Map(Object.entries(borbenaVozila));
+console.log(tenkoviMapa);
+
+for (const [status, vreme] of stadion) {
+  if ((typeof vreme === 'number') & (vreme < 53000)) {
+    const radnoVreme =
+      status === 'otvoreno'
+        ? `Stadion se otvara u ${vreme} casova`
+        : `Stadion se zatvara u ${vreme} casova`;
+    console.log(radnoVreme);
+  }
+}
