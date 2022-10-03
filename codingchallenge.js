@@ -109,7 +109,7 @@ for (const [tim, kvota] of Object.entries(game.odds)) {
   console.log(`Kvota za${kvotaTimova} je: ${kvota}`);
 }
 */
-
+/*
 //CODING CHALLENGE 3
 //1.
 let eventsArr = [...gameEvents.values()];
@@ -133,3 +133,18 @@ for (const [min, eve] of gameEvents.entries()) {
     min < 45 ? `[FIRST HALF] ${min}: ${eve}` : `[SECOND HALF] ${min}: ${eve}`;
   console.log(izvestaj);
 }
+*/
+
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+document.querySelector('button').addEventListener('click', function () {
+  const text = document.querySelector('textarea').value;
+  const splitText = text.split('\n');
+
+  for (const [i, stringText] of splitText.entries()) {
+    const [prva, druga] = stringText.toLowerCase().trim().split('_');
+    const resenje = [prva, druga[0].toUpperCase()].join('') + druga.slice(1);
+    console.log(`${resenje.padEnd(20)}${'✅'.repeat(i + 1)}`);
+  }
+});
