@@ -492,7 +492,7 @@ proveriSrednjeSediste('122F');
 */
 
 //WORKING WITH STRINGS 2
-
+/*
 console.log(airline.toLowerCase());
 console.log(airline.toUpperCase());
 
@@ -579,3 +579,28 @@ checkBaggage('I have a laptop, some Food and a pocket Knife');
 checkBaggage('Socks and camera');
 checkBaggage('Got some snacks and gun for protection');
 checkBaggage('I have some chocolate just in case my sugar runs down!');
+*/
+
+//WORKING WITH STRINGS 3
+
+//split and join
+console.log('a+very+nice+string'.split('+'));
+console.log('Uros Martic'.split(' '));
+
+const [ime, prezime] = 'Uros Martic'.split(' ');
+
+const novoIme = ['Mr.', ime, prezime.toUpperCase()].join('---');
+console.log(novoIme);
+
+const capitalizeName = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+  for (const ime of names) {
+    namesUpper.push(ime[0].toUpperCase() + ime.slice(1)); //krace resenje: namesUpper.push(ime.replace(ime[0], ime[0].toUpperCase()));
+  }
+  console.log(namesUpper.join(' '));
+};
+
+capitalizeName('jean claude van damme');
+capitalizeName('mitar mitra mitar');
+capitalizeName('uros martic');
