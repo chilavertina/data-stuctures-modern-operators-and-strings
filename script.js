@@ -604,3 +604,25 @@ const capitalizeName = function (name) {
 capitalizeName('jean claude van damme');
 capitalizeName('mitar mitra mitar');
 capitalizeName('uros martic');
+
+// padding
+
+const message = 'Go to gate 23!';
+console.log(message.padStart(25, '+'));
+console.log('Uros'.padStart(25, '+'));
+
+console.log(message.padEnd(25, '+'));
+console.log('Uros'.padEnd(25, '+'));
+
+console.log(message.padStart(25, '+').padEnd(30, '-'));
+console.log('Uros'.padStart(25, '+').padEnd(30, '-'));
+
+const maskedCreditCard = function (number) {
+  const numberString = number + ''; //ovo smo uradili da bi number pretvorili u string
+  const last = numberString.slice(-4);
+  return last.padStart(numberString.length, '*');
+};
+
+console.log(maskedCreditCard('1234867495043719'));
+console.log(maskedCreditCard(1234867495043719));
+console.log(maskedCreditCard('1234867'));
