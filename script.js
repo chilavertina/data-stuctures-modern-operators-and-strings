@@ -450,7 +450,7 @@ console.log([...question.entries()]);
 
 //WORKING WITH STRINGS 1
 const airline = 'TAP Air Portugal';
-const plane = 'A320';
+//const plane = 'A320';
 /*
 console.log(plane[0]);
 console.log(plane[1]);
@@ -546,3 +546,36 @@ const announcement =
 console.log(announcement.replace('door', 'gate')); //replace menja samo prvu rec na koju naidje
 console.log(announcement.replaceAll('door', 'gate')); //replaceAll menja sve reci koje se nalaze u stringu
 console.log(announcement.replace(/door/g, 'gate')); // /door/g je 'regular expression' i on menja sve reci koje se nalaze u stringu takodje, ali to je stariji nacin menjanja
+
+//Booleans
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.startsWith('Air'));
+console.log(plane.startsWith('Airbus'));
+console.log(plane.startsWith('Air'));
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log(`Part of the new Airbus family`);
+}
+
+//Vezba
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (
+    baggage.includes('knife') ||
+    baggage.includes('gun') ||
+    baggage.includes('chocolate')
+  ) {
+    console.log(
+      'You are NOT allowed on board! Please, leave your guns, knifes and chocolates and step aside.'
+    );
+  } else {
+    console.log('Welcome aboard!');
+  }
+};
+
+checkBaggage('I have a laptop, some Food and a pocket Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Got some snacks and gun for protection');
+checkBaggage('I have some chocolate just in case my sugar runs down!');
