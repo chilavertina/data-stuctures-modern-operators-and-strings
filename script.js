@@ -582,7 +582,7 @@ checkBaggage('I have some chocolate just in case my sugar runs down!');
 */
 
 //WORKING WITH STRINGS 3
-
+/*
 //split and join
 console.log('a+very+nice+string'.split('+'));
 console.log('Uros Martic'.split(' '));
@@ -604,7 +604,7 @@ const capitalizeName = function (name) {
 capitalizeName('jean claude van damme');
 capitalizeName('mitar mitra mitar');
 capitalizeName('uros martic');
-
+*/
 // padding
 
 const message = 'Go to gate 23!';
@@ -628,7 +628,7 @@ console.log(maskedCreditCard(1234867495043719));
 console.log(maskedCreditCard('1234867'));
 
 // repeat
-
+/*
 const message2 = 'Bad weather... All departures delayed... ';
 console.log(message2.repeat(5));
 
@@ -639,3 +639,4 @@ const planesInLine = function (number) {
 planesInLine(6);
 planesInLine(12);
 planesInLine(3);
+*/
